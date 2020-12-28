@@ -1,0 +1,25 @@
+{
+  "name": "repo_scheduler",
+  "version": "1.0.0",
+  "description": "Repo Scheduling Serever",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwatchguard/Repo_Scheduler.git"
+  },
+  "author": "Torrey Kelly",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dwatchguard/Repo_Scheduler/issues"
+  },
+  "homepage": "https://github.com/dwatchguard/Repo_Scheduler#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.16.0"
+  }
+}

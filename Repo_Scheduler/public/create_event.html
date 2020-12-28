@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+</style>
+</head>
+<body>
+
+<div class="dropdown">
+  <button class="dropbtn">Office Options</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="../add_repo">Add Repo</a>
+    <a href="../modify_status">Change Vehicle Status</a>
+    <a href="../create_event">Schedule Appointment</a>
+    <a href="../remove_event">Delete Appointment</a>
+    <a href="https://calendar.google.com/calendar/embed?src=ih3lpl9e58dllncnu7imfqhg08%40group.calendar.google.com&ctz=America%2FNew_York">See Schedule</a>
+  </div>
+</div>
+<h1>Schedule Appointment:</h1>
+<form action="/create_event/" method="post">
+    <label for="VIN">VIN </label>
+    <input id="VIN" type="text" name="vin_field" required><br>
+    <label for="phone">Enter your phone number:</label>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}"><br>
+    <p>Type of Appointment:</p>
+    <input type="radio" id="property" name="appointment_type" value="PropReady" checked>
+    <label for="property">Property Redemption</label><br>
+    <input type="radio" id="vehicle" name="appointment_type" value="RedemptionReady">
+    <label for="vehicle">Vehicle Redemption</label><br>
+    <input type="radio" id="transport" name="appointment_type" value="TransportReady">
+    <label for="transport">Transport to Auction</label><br>
+    <label for="date">Date to Schedule:</label>
+    <input type="date" id="appointment_date" name="appointment_date" required><br>
+    <label for="appt-time">Choose an appointment time: </label>
+    <input id="appt-time" type="time" name="appt_time" value="10:00" required>
+    <input type="submit">
+</form>
+
+</body>
+</html>

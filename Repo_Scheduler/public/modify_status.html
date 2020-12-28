@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+</style>
+</head>
+<body>
+<div class="dropdown">
+  <button class="dropbtn">Office Options</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="../add_repo">Add Repo</a>
+    <a href="../modify_status">Change Vehicle Status</a>
+    <a href="../create_event">Schedule Appointment</a>
+    <a href="../remove_event">Delete Appointment</a>
+    <a href="https://calendar.google.com/calendar/embed?src=ih3lpl9e58dllncnu7imfqhg08%40group.calendar.google.com&ctz=America%2FNew_York">See Schedule</a>
+  </div>
+</div>
+<h1>Modify Vehicle Status</h1>
+<form action="/modify_status/" method="post">
+    <label for="VIN">VIN </label>
+    <input id="VIN" type="text" name="vin_field" required>
+    <p>Is the Property Ready For Redemption?:</p>
+    <input type="radio" id="not_ready" name="prop_ready" value=0 checked>
+    <label for="not_ready">Not Ready</label><br>
+    <input type="radio" id="ready" name="prop_ready" value=1>
+    <label for="ready">Ready</label><br>
+    <p>Is the Vehicle Ready For Redemption?:</p>
+    <input type="radio" id="not_ready" name="veh_red_ready" value=0 checked>
+    <label for="not_ready">Not Ready</label><br>
+    <input type="radio" id="ready" name="veh_red_ready" value=1>
+    <label for="ready">Ready</label><br>
+    <p>Is the Vehicle Ready For Transport?:</p>
+    <input type="radio" id="not_ready" name="veh_trans_ready" value=0 checked>
+    <label for="not_ready">Not Ready</label><br>
+    <input type="radio" id="ready" name="veh_trans_ready" value=1>
+    <label for="ready">Ready</label><br>
+    <input type="submit" value="SUBMIT">
+</form>
+
+
+</body>
+</html>
